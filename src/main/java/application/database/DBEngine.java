@@ -36,7 +36,10 @@ public class DBEngine {
     }
 
     public List<Members> listAllMembers() {
-        String query = "SELECT * FROM members";
+      //  String query = "SELECT * FROM members";
+        String query = new QueryBuilder()
+                .select(TableName.MEMBERS)
+                .build();
 
         List<Members> members = new ArrayList<>();
 

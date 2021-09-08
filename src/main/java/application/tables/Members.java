@@ -1,6 +1,6 @@
 package application.tables;
 
-import java.sql.Date;
+import java.time.LocalDateTime;
 
 public class Members {
     private int memberId;
@@ -8,7 +8,7 @@ public class Members {
     private MemberState state;
     private String emilMember;
     private byte[] profilPic;
-    private Date regTime;
+    private LocalDateTime regTime;
 
     public Members() {
     }
@@ -60,11 +60,11 @@ public class Members {
         this.profilPic = profilPic;
     }
 
-    public Date getRegTime() {
+    public LocalDateTime getRegTime() {
         return regTime;
     }
 
-    public void setRegTime(Date regTime) {
+    public void setRegTime(LocalDateTime regTime) {
         this.regTime = regTime;
     }
 }
